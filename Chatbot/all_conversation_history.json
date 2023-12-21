@@ -1,0 +1,15 @@
+{"annie": [{"role": "user", "content": "what is gold?"}, 
+{"role": "ai", "content": "Gold is a precious metal."},
+ {"role": "user", "content": "what is milk?"}, 
+ {"role": "ai", "content": "I don't have any answer, please ask another question."}],
+
+  "rose": [{"role": "user", "content": "man"}, 
+  {"role": "ai", "content": "I don't have any answer, please ask another question."},
+   {"role": "user", "content": "rice"}, 
+   {"role": "ai", "content": "I don't have any answer, please ask another question."},
+    {"role": "user", "content": "goat"}, 
+    {"role": "ai", "content": "I don't have any answer, please ask another question."},
+     {"role": "user", "content": "hunry"}, 
+     {"role": "ai", "content": "I don't have any answer, please ask another question."},
+      {"role": "user", "content": "& C:/Users/USER/AppData/Local/Programs/Python/Python310/python.exe \"c:/Users/USER/AppData/Local/Microsoft/Windows/INetCache/IE/CXVRQU94/Chatbot Class.py\""},
+       {"role": "ai", "content": "I don't have any answer, please ask another question."}]}
