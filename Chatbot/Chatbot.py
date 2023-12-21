@@ -55,16 +55,6 @@ class Chatbot:
         else:
             print("User name not set. Conversation history cannot be saved.")
 
-    # def load_conversation_history(self, user_name):
-    #     # This function should return chat_history (list of tuples) if user exist in json file else, it should return None
-    #     # user_name should not be an attribute of the class
-    #     if self.user_name:
-    #         filename = f"{self.user_name}_conversation_history.json"
-    #         if os.path.exists(filename):
-                 
-    #                 self.conversation_history = json.load(file)
-
-
 
     def format_history(self):
         formatted_history = []
@@ -93,18 +83,12 @@ def run_through(message):
 
 class GPTBot(Chatbot):
     def __init__(self, api_key):
-       self.api_key = api_key # api-key can also passed when initializing OpenAI()
+       self.api_key = api_key 
         
-    def answer(self,query, user_name="John Doe"):
-        #TODO: implement the proper load_conversation_history() and format_chat_history()
-        # chat_history = self.load_conversation_history(user_name)
-        # if chat_history is not  None:
-            # chat_history = self.format_history(chat_history)
+    def answer(self,query, user_name="Annie"):
         
-        user_message = {"role": "user", "content": query} #"name" : "jeffrey"
-        # chat_history.append(user_message)
-        chat_history = [user_message] # Delete this once all si implemented
-            
+        user_message = {"role": "user", "content": query} 
+        chat_history = [user_message]
         response= client.chat.completions.create(
                 model="mistralai/mistral-7b-instruct",
             messages=chat_history,
@@ -113,9 +97,6 @@ class GPTBot(Chatbot):
         print(response.choices[0].message.content)
         response = response.choices[0].message
 
-        # ssave chat_history
-        # chat_history.append(response)
-        # self.save_conversation_history(user_name, chat_history)
 
         return response.content
 
